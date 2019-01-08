@@ -1,6 +1,6 @@
 //
 //  WiFiData.swift
-//  NEHotspotHelperSample
+//  NEHotspotHelperApp
 //
 //  Created by 外崎大輔 on 2019/01/08.
 //  Copyright © 2019 test. All rights reserved.

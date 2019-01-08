@@ -19,7 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		02BEE48521E42D4E00D9D459 /* NEHotspotHelperSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NEHotspotHelperSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		02BEE48521E42D4E00D9D459 /* NEHotspotHelpeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NEHotspotHelpeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02BEE48821E42D4E00D9D459 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02BEE48A21E42D4E00D9D459 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		02BEE48D21E42D4E00D9D459 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -29,7 +29,7 @@
 		02BEE49B21E4312600D9D459 /* HotspotHelperManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotspotHelperManager.swift; sourceTree = "<group>"; };
 		02BEE49E21E431AE00D9D459 /* WiFiData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiData.swift; sourceTree = "<group>"; };
 		02BEE4A321E43E7F00D9D459 /* LogUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogUtil.swift; sourceTree = "<group>"; };
-		02BEE4A821E4703C00D9D459 /* NEHotspotHelperSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NEHotspotHelperSample.entitlements; sourceTree = "<group>"; };
+		02BEE4A821E4703C00D9D459 /* NEHotspotHelperApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NEHotspotHelperApp.entitlements; sourceTree = "<group>"; };
 		02BEE4AC21E4767400D9D459 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -48,7 +48,7 @@
 		02BEE47C21E42D4E00D9D459 = {
 			isa = PBXGroup;
 			children = (
-				02BEE48721E42D4E00D9D459 /* NEHotspotHelperSample */,
+				02BEE48721E42D4E00D9D459 /* NEHotspotHelperApp */,
 				02BEE48621E42D4E00D9D459 /* Products */,
 				02BEE4A021E4330400D9D459 /* Frameworks */,
 			);
@@ -57,15 +57,15 @@
 		02BEE48621E42D4E00D9D459 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				02BEE48521E42D4E00D9D459 /* NEHotspotHelperSample.app */,
+				02BEE48521E42D4E00D9D459 /* NEHotspotHelpeApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		02BEE48721E42D4E00D9D459 /* NEHotspotHelperSample */ = {
+		02BEE48721E42D4E00D9D459 /* NEHotspotHelperApp */ = {
 			isa = PBXGroup;
 			children = (
-				02BEE4A821E4703C00D9D459 /* NEHotspotHelperSample.entitlements */,
+				02BEE4A821E4703C00D9D459 /* NEHotspotHelperApp.entitlements */,
 				02BEE48821E42D4E00D9D459 /* AppDelegate.swift */,
 				02BEE48A21E42D4E00D9D459 /* ViewController.swift */,
 				02BEE4A321E43E7F00D9D459 /* LogUtil.swift */,
@@ -75,7 +75,7 @@
 				02BEE49121E42D5100D9D459 /* LaunchScreen.storyboard */,
 				02BEE49421E42D5100D9D459 /* Info.plist */,
 			);
-			path = NEHotspotHelperSample;
+			path = NEHotspotHelperApp;
 			sourceTree = "<group>";
 		};
 		02BEE49D21E4318900D9D459 /* Wi-Fi */ = {
@@ -98,9 +98,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		02BEE48421E42D4E00D9D459 /* NEHotspotHelperSample */ = {
+		02BEE48421E42D4E00D9D459 /* NEHotspotHelpeApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 02BEE49721E42D5100D9D459 /* Build configuration list for PBXNativeTarget "NEHotspotHelperSample" */;
+			buildConfigurationList = 02BEE49721E42D5100D9D459 /* Build configuration list for PBXNativeTarget "NEHotspotHelpeApp" */;
 			buildPhases = (
 				02BEE48121E42D4E00D9D459 /* Sources */,
 				02BEE48221E42D4E00D9D459 /* Frameworks */,
@@ -110,9 +110,9 @@
 			);
 			dependencies = (
 			);
-			name = NEHotspotHelperSample;
+			name = NEHotspotHelpeApp;
 			productName = NEHotspotHelperSample;
-			productReference = 02BEE48521E42D4E00D9D459 /* NEHotspotHelperSample.app */;
+			productReference = 02BEE48521E42D4E00D9D459 /* NEHotspotHelpeApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -141,7 +141,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 02BEE48021E42D4E00D9D459 /* Build configuration list for PBXProject "NEHotspotHelperSample" */;
+			buildConfigurationList = 02BEE48021E42D4E00D9D459 /* Build configuration list for PBXProject "NEHotspotHelpeApp" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -154,7 +154,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				02BEE48421E42D4E00D9D459 /* NEHotspotHelperSample */,
+				02BEE48421E42D4E00D9D459 /* NEHotspotHelpeApp */,
 			);
 		};
 /* End PBXProject section */
@@ -327,16 +327,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = NEHotspotHelperSample/NEHotspotHelperSample.entitlements;
+				CODE_SIGN_ENTITLEMENTS = NEHotspotHelperApp/NEHotspotHelperApp.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = NEHotspotHelperSample/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/NEHotspotHelperApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = test.NEHotspotHelperSample;
+				PRODUCT_BUNDLE_IDENTIFIER = test.NEHotspotHelperApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
@@ -348,16 +348,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = NEHotspotHelperSample/NEHotspotHelperSample.entitlements;
+				CODE_SIGN_ENTITLEMENTS = NEHotspotHelperApp/NEHotspotHelperApp.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = NEHotspotHelperSample/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/NEHotspotHelperApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = test.NEHotspotHelperSample;
+				PRODUCT_BUNDLE_IDENTIFIER = test.NEHotspotHelperApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
@@ -368,7 +368,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		02BEE48021E42D4E00D9D459 /* Build configuration list for PBXProject "NEHotspotHelperSample" */ = {
+		02BEE48021E42D4E00D9D459 /* Build configuration list for PBXProject "NEHotspotHelpeApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				02BEE49521E42D5100D9D459 /* Debug */,
@@ -377,7 +377,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		02BEE49721E42D5100D9D459 /* Build configuration list for PBXNativeTarget "NEHotspotHelperSample" */ = {
+		02BEE49721E42D5100D9D459 /* Build configuration list for PBXNativeTarget "NEHotspotHelpeApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				02BEE49821E42D5100D9D459 /* Debug */,

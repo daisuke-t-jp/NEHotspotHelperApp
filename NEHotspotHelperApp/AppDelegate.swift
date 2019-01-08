@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  NEHotspotHelperSample
+//  NEHotspotHelperApp
 //
 //  Created by Daisuke T on 2019/01/08.
 //  Copyright © 2019 test. All rights reserved.
