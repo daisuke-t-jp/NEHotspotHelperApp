@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "02BEE48421E42D4E00D9D459"
-               BuildableName = "NEHotspotHelpeApp.app"
-               BlueprintName = "NEHotspotHelpeApp"
-               ReferencedContainer = "container:NEHotspotHelpeApp.xcodeproj">
+               BuildableName = "NEHotspotHelperApp.app"
+               BlueprintName = "NEHotspotHelperApp"
+               ReferencedContainer = "container:NEHotspotHelperApp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "02BEE48421E42D4E00D9D459"
-            BuildableName = "NEHotspotHelpeApp.app"
-            BlueprintName = "NEHotspotHelpeApp"
-            ReferencedContainer = "container:NEHotspotHelpeApp.xcodeproj">
+            BuildableName = "NEHotspotHelperApp.app"
+            BlueprintName = "NEHotspotHelperApp"
+            ReferencedContainer = "container:NEHotspotHelperApp.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "02BEE48421E42D4E00D9D459"
-            BuildableName = "NEHotspotHelpeApp.app"
-            BlueprintName = "NEHotspotHelpeApp"
-            ReferencedContainer = "container:NEHotspotHelpeApp.xcodeproj">
+            BuildableName = "NEHotspotHelperApp.app"
+            BlueprintName = "NEHotspotHelperApp"
+            ReferencedContainer = "container:NEHotspotHelperApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "02BEE48421E42D4E00D9D459"
-            BuildableName = "NEHotspotHelpeApp.app"
-            BlueprintName = "NEHotspotHelpeApp"
-            ReferencedContainer = "container:NEHotspotHelpeApp.xcodeproj">
+            BuildableName = "NEHotspotHelperApp.app"
+            BlueprintName = "NEHotspotHelperApp"
+            ReferencedContainer = "container:NEHotspotHelperApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

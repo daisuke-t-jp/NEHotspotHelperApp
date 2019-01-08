@@ -19,7 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		02BEE48521E42D4E00D9D459 /* NEHotspotHelpeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NEHotspotHelpeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		02BEE48521E42D4E00D9D459 /* NEHotspotHelperApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NEHotspotHelperApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02BEE48821E42D4E00D9D459 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02BEE48A21E42D4E00D9D459 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		02BEE48D21E42D4E00D9D459 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -57,7 +57,7 @@
 		02BEE48621E42D4E00D9D459 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				02BEE48521E42D4E00D9D459 /* NEHotspotHelpeApp.app */,
+				02BEE48521E42D4E00D9D459 /* NEHotspotHelperApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -98,9 +98,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		02BEE48421E42D4E00D9D459 /* NEHotspotHelpeApp */ = {
+		02BEE48421E42D4E00D9D459 /* NEHotspotHelperApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 02BEE49721E42D5100D9D459 /* Build configuration list for PBXNativeTarget "NEHotspotHelpeApp" */;
+			buildConfigurationList = 02BEE49721E42D5100D9D459 /* Build configuration list for PBXNativeTarget "NEHotspotHelperApp" */;
 			buildPhases = (
 				02BEE48121E42D4E00D9D459 /* Sources */,
 				02BEE48221E42D4E00D9D459 /* Frameworks */,
@@ -110,9 +110,9 @@
 			);
 			dependencies = (
 			);
-			name = NEHotspotHelpeApp;
+			name = NEHotspotHelperApp;
 			productName = NEHotspotHelperSample;
-			productReference = 02BEE48521E42D4E00D9D459 /* NEHotspotHelpeApp.app */;
+			productReference = 02BEE48521E42D4E00D9D459 /* NEHotspotHelperApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -141,7 +141,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 02BEE48021E42D4E00D9D459 /* Build configuration list for PBXProject "NEHotspotHelpeApp" */;
+			buildConfigurationList = 02BEE48021E42D4E00D9D459 /* Build configuration list for PBXProject "NEHotspotHelperApp" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -154,7 +154,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				02BEE48421E42D4E00D9D459 /* NEHotspotHelpeApp */,
+				02BEE48421E42D4E00D9D459 /* NEHotspotHelperApp */,
 			);
 		};
 /* End PBXProject section */
@@ -368,7 +368,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		02BEE48021E42D4E00D9D459 /* Build configuration list for PBXProject "NEHotspotHelpeApp" */ = {
+		02BEE48021E42D4E00D9D459 /* Build configuration list for PBXProject "NEHotspotHelperApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				02BEE49521E42D5100D9D459 /* Debug */,
@@ -377,7 +377,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		02BEE49721E42D5100D9D459 /* Build configuration list for PBXNativeTarget "NEHotspotHelpeApp" */ = {
+		02BEE49721E42D5100D9D459 /* Build configuration list for PBXNativeTarget "NEHotspotHelperApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				02BEE49821E42D5100D9D459 /* Debug */,
