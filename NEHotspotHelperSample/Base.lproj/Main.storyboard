@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NEHotspotHelperSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. Input BSSID, SSID, PW." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="TVj-Xq-xnz">
+                                <rect key="frame" x="94.5" y="65" width="186" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="ASj-Ki-o5W"/>
+                                    <constraint firstAttribute="width" constant="186" id="Q4C-fE-Uss"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="BSSID(optional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yTi-eF-bQf">
+                                <rect key="frame" x="110" y="94" width="155" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="C9B-ad-EM4"/>
+                                    <constraint firstAttribute="width" constant="155" id="aRl-ot-Kto"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="SSID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RO0-tH-79c">
+                                <rect key="frame" x="110" y="140" width="155" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="155" id="Cxn-iv-FHd"/>
+                                    <constraint firstAttribute="height" constant="30" id="sy5-H3-4pc"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PW" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="01z-nS-I2V">
+                                <rect key="frame" x="110" y="186" width="155" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="155" id="axy-71-y0B"/>
+                                    <constraint firstAttribute="height" constant="30" id="mh2-IM-yHG"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2. Select Auth Type.(dummy)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="mMF-7z-A2N">
+                                <rect key="frame" x="76.5" y="243" width="222.5" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="222.5" id="4tY-bD-w25"/>
+                                    <constraint firstAttribute="height" constant="21" id="NPR-AN-em0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eTC-AK-ZhU">
+                                <rect key="frame" x="103" y="272" width="169" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="169" id="ANh-Ln-5Ft"/>
+                                    <constraint firstAttribute="height" constant="28" id="yCi-Wg-vyd"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="WPA/WPA2"/>
+                                    <segment title="WEP"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3. Register" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="yEO-Hh-d4G">
+                                <rect key="frame" x="146.5" y="349" width="82" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="82" id="QNk-1I-WwR"/>
+                                    <constraint firstAttribute="height" constant="21" id="d77-0I-yN0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMl-hC-YfP">
+                                <rect key="frame" x="42.5" y="471" width="290" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="SfR-Qt-pwV"/>
+                                    <constraint firstAttribute="width" constant="290" id="g5m-eZ-bN2"/>
+                                </constraints>
+                                <string key="text">4. You open iOS "Setting" -&gt; "Wi-Fi".
+Wi-Fi connecting after few seconds.
+
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bwc-Oa-4vv">
+                                <rect key="frame" x="131" y="388" width="113" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="113" id="gdi-ZK-1dB"/>
+                                    <constraint firstAttribute="height" constant="46" id="zxd-xx-Uqu"/>
+                                </constraints>
+                                <state key="normal" title="Register"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rMl-hC-YfP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8ai-vl-Q8y"/>
+                            <constraint firstItem="yEO-Hh-d4G" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9uJ-xv-eUK"/>
+                            <constraint firstItem="yTi-eF-bQf" firstAttribute="top" secondItem="TVj-Xq-xnz" secondAttribute="bottom" constant="8" id="Cy7-WR-yUg"/>
+                            <constraint firstItem="Bwc-Oa-4vv" firstAttribute="top" secondItem="yEO-Hh-d4G" secondAttribute="bottom" constant="18" id="Ws1-Sv-HFN"/>
+                            <constraint firstItem="eTC-AK-ZhU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZC4-GZ-3Gx"/>
+                            <constraint firstItem="01z-nS-I2V" firstAttribute="top" secondItem="RO0-tH-79c" secondAttribute="bottom" constant="16" id="c5q-9E-0CQ"/>
+                            <constraint firstItem="eTC-AK-ZhU" firstAttribute="top" secondItem="mMF-7z-A2N" secondAttribute="bottom" constant="8" id="cDt-TS-XS0"/>
+                            <constraint firstItem="yEO-Hh-d4G" firstAttribute="top" secondItem="eTC-AK-ZhU" secondAttribute="bottom" constant="49" id="ccq-ix-iSi"/>
+                            <constraint firstItem="RO0-tH-79c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eAs-Gd-rMh"/>
+                            <constraint firstItem="rMl-hC-YfP" firstAttribute="top" secondItem="Bwc-Oa-4vv" secondAttribute="bottom" constant="37" id="ezI-r1-m0i"/>
+                            <constraint firstItem="yTi-eF-bQf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fAw-Jh-EeA"/>
+                            <constraint firstItem="TVj-Xq-xnz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="gr3-XY-UNz"/>
+                            <constraint firstItem="mMF-7z-A2N" firstAttribute="top" secondItem="01z-nS-I2V" secondAttribute="bottom" constant="27" id="hb7-P0-4jH"/>
+                            <constraint firstItem="mMF-7z-A2N" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mC5-CF-nsX"/>
+                            <constraint firstItem="01z-nS-I2V" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rOv-Wy-JrM"/>
+                            <constraint firstItem="RO0-tH-79c" firstAttribute="top" secondItem="yTi-eF-bQf" secondAttribute="bottom" constant="16" id="ryp-Ig-egp"/>
+                            <constraint firstItem="TVj-Xq-xnz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uXV-9w-MgM"/>
+                            <constraint firstItem="Bwc-Oa-4vv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wfr-S2-ROe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="_button" destination="Bwc-Oa-4vv" id="1qX-oO-9bs"/>
+                        <outlet property="_textfieldBSSID" destination="yTi-eF-bQf" id="JUJ-OD-LKM"/>
+                        <outlet property="_textfieldPW" destination="01z-nS-I2V" id="6Th-Jf-RtP"/>
+                        <outlet property="_textfieldSSID" destination="RO0-tH-79c" id="egx-eS-sh1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="84" y="105.69715142428787"/>
+        </scene>
+    </scenes>
+</document>

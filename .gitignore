@@ -1,0 +1,12 @@
+# Xcode
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcworkspace/xcshareddata/
+**/xcshareddata/WorkspaceSettings.xcsettings
+
+# cocoa pod
+Pods/*
+
+# others
+.DS_Store
