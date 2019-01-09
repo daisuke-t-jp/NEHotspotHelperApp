@@ -41,7 +41,7 @@ class WiFiData : Equatable
 		_BSSID = network.bssid
 		_SSID = network.ssid
 		_PW = ""
-		_authType = AuthType.WEP;
+		_authType = AuthType.WEP
 	}
 	
 	
