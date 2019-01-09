@@ -68,7 +68,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 		data._SSID = _textfieldSSID!.text!
 		data._PW = _textfieldPW!.text!
 
-		HotspotHelperManager.instance._dataArray = [data]
+		HotspotHelperManager.sharedInstance._dataArray = [data]
 
 		
 		let alert: UIAlertController = UIAlertController(title: "",

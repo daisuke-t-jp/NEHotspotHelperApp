@@ -18,16 +18,15 @@ import NetworkExtension
 class HotspotHelperManager
 {
 	// MARK: singleton
-	static let instance = HotspotHelperManager()
+	static let sharedInstance = HotspotHelperManager()
 	private init() {
-		_dataArray = []
-		_isEnabled = false
+		// NOP
 	}
 	
 	
 	// MARK: member
-	var _dataArray: [WiFiData]
-	var _isEnabled:Bool;
+	var _dataArray: [WiFiData] = []
+	var _isEnabled:Bool = false
 	
 	
 	
