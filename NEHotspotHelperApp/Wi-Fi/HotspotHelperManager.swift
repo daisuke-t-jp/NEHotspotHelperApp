@@ -89,7 +89,7 @@ class HotspotHelperManager
 	 */
 	fileprivate func HandleOnNone(command:NEHotspotHelperCommand) -> Void
 	{
-		LLALogManager.sharedInstance.d("")
+		print("HandleOnNone")
 	}
 
 	/**
@@ -102,8 +102,8 @@ class HotspotHelperManager
 	 */
 	fileprivate func HandleOnFilterScanList(command:NEHotspotHelperCommand) -> Void
 	{
-		LLALogManager.sharedInstance.d("")
-		
+		print("HandleOnFilterScanList")
+
 		// create network list for managed network.
 		var array: [NEHotspotNetwork] = []
 			
@@ -117,7 +117,7 @@ class HotspotHelperManager
 				}
 
 				// managed network.
-				LLALogManager.sharedInstance.d("add networklist [\(network)]")
+				print("add networklist [\(network)]")
 
 				network.setPassword(_dataArray[index]._PW)
 				network.setConfidence(NEHotspotHelperConfidence.high)
@@ -144,6 +144,8 @@ class HotspotHelperManager
 	 */
 	fileprivate func HandleOnEvaluate(command:NEHotspotHelperCommand) -> Void
 	{
+		print("HandleOnEvaluate")
+
 		guard let network:NEHotspotNetwork = command.network else {
 			return
 		}
@@ -155,7 +157,7 @@ class HotspotHelperManager
 
 		
 		// managed network.
-		LLALogManager.sharedInstance.d(network)
+		print(network)
 
 		network.setConfidence(NEHotspotHelperConfidence.high)
 		
@@ -173,6 +175,8 @@ class HotspotHelperManager
 	 */
 	fileprivate func HandleOnMaintain(command:NEHotspotHelperCommand) -> Void
 	{
+		print("HandleOnMaintain")
+
 		guard let network:NEHotspotNetwork = command.network else {
 			return
 		}
@@ -184,7 +188,7 @@ class HotspotHelperManager
 		
 		
 		// managed network.
-		LLALogManager.sharedInstance.d(network)
+		print(network)
 
 		let response = command.createResponse(NEHotspotHelperResult.success)
 		response.setNetwork(network)
@@ -198,6 +202,8 @@ class HotspotHelperManager
 	 */
 	fileprivate func HandleOnAuthenticate(command:NEHotspotHelperCommand) -> Void
 	{
+		print("HandleOnAuthenticate")
+
 		guard let network:NEHotspotNetwork = command.network else {
 			return
 		}
@@ -209,7 +215,7 @@ class HotspotHelperManager
 		
 		
 		// managed network.
-		LLALogManager.sharedInstance.d(network)
+		print(network)
 
 		let response = command.createResponse(NEHotspotHelperResult.success)
 		response.setNetwork(network)
@@ -221,7 +227,7 @@ class HotspotHelperManager
 	 */
 	fileprivate func HandleOnPresentUI(command:NEHotspotHelperCommand) -> Void
 	{
-		LLALogManager.sharedInstance.d("")
+		print("HandleOnPresentUI")
 	}
 
 	/**
@@ -229,7 +235,7 @@ class HotspotHelperManager
 	 */
 	fileprivate func HandleOnLogoff(command:NEHotspotHelperCommand) -> Void
 	{
-		LLALogManager.sharedInstance.d("")
+		print("HandleOnLogoff")
 	}
 	
 }
