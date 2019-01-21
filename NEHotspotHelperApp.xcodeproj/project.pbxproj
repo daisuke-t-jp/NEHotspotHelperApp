@@ -13,7 +13,7 @@
 		02BEE49021E42D5100D9D459 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02BEE48F21E42D5100D9D459 /* Assets.xcassets */; };
 		02BEE49321E42D5100D9D459 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02BEE49121E42D5100D9D459 /* LaunchScreen.storyboard */; };
 		02BEE49C21E4312600D9D459 /* HotspotHelperManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BEE49B21E4312600D9D459 /* HotspotHelperManager.swift */; };
-		02BEE49F21E431AE00D9D459 /* WiFiData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BEE49E21E431AE00D9D459 /* WiFiData.swift */; };
+		02BEE49F21E431AE00D9D459 /* Hotspot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BEE49E21E431AE00D9D459 /* Hotspot.swift */; };
 		02BEE4AD21E4767400D9D459 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02BEE4AC21E4767400D9D459 /* NetworkExtension.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +26,7 @@
 		02BEE49221E42D5100D9D459 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02BEE49421E42D5100D9D459 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02BEE49B21E4312600D9D459 /* HotspotHelperManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotspotHelperManager.swift; sourceTree = "<group>"; };
-		02BEE49E21E431AE00D9D459 /* WiFiData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiData.swift; sourceTree = "<group>"; };
+		02BEE49E21E431AE00D9D459 /* Hotspot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hotspot.swift; sourceTree = "<group>"; };
 		02BEE4A821E4703C00D9D459 /* NEHotspotHelperApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NEHotspotHelperApp.entitlements; sourceTree = "<group>"; };
 		02BEE4AC21E4767400D9D459 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -79,7 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				02BEE49B21E4312600D9D459 /* HotspotHelperManager.swift */,
-				02BEE49E21E431AE00D9D459 /* WiFiData.swift */,
+				02BEE49E21E431AE00D9D459 /* Hotspot.swift */,
 			);
 			path = "Wi-Fi";
 			sourceTree = "<group>";
@@ -176,7 +176,7 @@
 			files = (
 				02BEE49C21E4312600D9D459 /* HotspotHelperManager.swift in Sources */,
 				02BEE48B21E42D4E00D9D459 /* ViewController.swift in Sources */,
-				02BEE49F21E431AE00D9D459 /* WiFiData.swift in Sources */,
+				02BEE49F21E431AE00D9D459 /* Hotspot.swift in Sources */,
 				02BEE48921E42D4E00D9D459 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
