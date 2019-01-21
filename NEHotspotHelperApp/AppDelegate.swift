@@ -17,8 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 		// Override point for customization after application launch.
 		
-		HotspotHelperManager.sharedInstance.register()	// register hotspot helper.
-		HotspotHelperManager.sharedInstance._isEnabled = true;
+		HotspotHelperManager.sharedInstance.register("TEST")	// register hotspot helper.
+		HotspotHelperManager.sharedInstance.isEnabled = true;
 		
 		return true
 	}

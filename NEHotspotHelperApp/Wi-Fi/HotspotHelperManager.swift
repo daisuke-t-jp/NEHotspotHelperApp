@@ -1,9 +1,9 @@
 //
-//  AppDelegate.swift
+//  HotspotHelperManager.swift
 //  NEHotspotHelperApp
 //
 //  Created by Daisuke T on 2019/01/08.
-//  Copyright © 2019 test. All rights reserved.
+//  Copyright © 2019 Daisuke T. All rights reserved.
 //
 		
 
@@ -19,90 +19,88 @@ class HotspotHelperManager
 {
 	// MARK: singleton
 	static let sharedInstance = HotspotHelperManager()
-	private init() {
-		// NOP
-	}
+
 	
 	
 	// MARK: member
-	var _dataArray: [WiFiData] = []
-	var _isEnabled:Bool = false
+	var hotspots: [Hotspot] = []
+	var isEnabled: Bool = false
 	
 	
 	
 	// MARK: register
-	func register() -> Void
+	func register(_ displayName: String) -> Void
 	{
 		let options: [String:NSString] = [
-			kNEHotspotHelperOptionDisplayName:"NEHotspotHelper App"
+			kNEHotspotHelperOptionDisplayName: displayName as NSString
 		]
 	
 		NEHotspotHelper.register(options: options,
 								 queue: DispatchQueue.main) { (command) in
 									
-									guard self._isEnabled else{
+									guard self.isEnabled else{
 										return
 									}
 
 									
-									self.Handle(command: command)
+									self.handle(command: command)
 		}
 	}
 	
 	
 	
 	// MARK: handle events.
-	fileprivate func Handle(command:NEHotspotHelperCommand) -> Void
+	fileprivate func handle(command: NEHotspotHelperCommand) -> Void
 	{
 		if command.commandType == .none
 		{
-			HandleOnNone(command: command)
+			handleOnNone(command: command)
 		}
 		else if command.commandType == .filterScanList
 		{
-			HandleOnFilterScanList(command: command)
+			handleOnFilterScanList(command: command)
 		}
 		else if command.commandType == .evaluate
 		{
-			HandleOnEvaluate(command: command)
+			handleOnEvaluate(command: command)
 		}
 		else if command.commandType == .maintain
 		{
-			HandleOnMaintain(command: command)
+			handleOnMaintain(command: command)
 		}
 		else if command.commandType == .authenticate
 		{
-			HandleOnAuthenticate(command: command)
+			handleOnAuthenticate(command: command)
 		}
 		else if command.commandType == .presentUI
 		{
-			HandleOnPresentUI(command: command)
+			handleOnPresentUI(command: command)
 		}
 		else if command.commandType == .logoff
 		{
-			HandleOnLogoff(command: command)
+			handleOnLogoff(command: command)
 		}
 	}
 	
 	/**
-	 * Handle, "null" command.
+	 * handle, "null" command.
 	 */
-	fileprivate func HandleOnNone(command:NEHotspotHelperCommand) -> Void
+	fileprivate func handleOnNone(command: NEHotspotHelperCommand) -> Void
 	{
-		print("HandleOnNone")
+		print("handleOnNone")
 	}
 
 	/**
-	 * Handle, Scan list.
+	 * handle, Scan list.
 	 *
 	 * create network list for managed network.
 	 *
 	 * !attention!
 	 * Do not set "NEHotspotHelperConfidence.high" other than managed network.
 	 */
-	fileprivate func HandleOnFilterScanList(command:NEHotspotHelperCommand) -> Void
+	fileprivate func handleOnFilterScanList(command: NEHotspotHelperCommand) -> Void
 	{
-		print("HandleOnFilterScanList")
+		print("handleOnFilterScanList")
 
 		// create network list for managed network.
 		var array: [NEHotspotNetwork] = []
@@ -111,7 +109,7 @@ class HotspotHelperManager
 		{
 			autoreleasepool
 			{
-				guard let index = _dataArray.index(of: WiFiData(network: network)) else {
+				guard let index = hotspots.index(of: Hotspot(network: network)) else {
 					// unmanaged network.
 					return
 				}
@@ -119,74 +117,74 @@ class HotspotHelperManager
 				// managed network.
 				print("add networklist [\(network)]")
 
-				network.setPassword(_dataArray[index]._PW)
+				network.setPassword(hotspots[index].pw)
 				network.setConfidence(NEHotspotHelperConfidence.high)
 				
 				array.append(network)
 			}
 		}
-		
-		
+
+
 		// create response.
 		let response = command.createResponse(NEHotspotHelperResult.success)
-		
+
 		if array.count > 0
 		{
 			// set network list when only there are managed network.
 			response.setNetworkList(array)
 		}
-	
+
 		response.deliver()
 	}
 
 	/**
-	 * Handle, Evalute.
+	 * handle, Evalute.
 	 */
-	fileprivate func HandleOnEvaluate(command:NEHotspotHelperCommand) -> Void
+	fileprivate func handleOnEvaluate(command:NEHotspotHelperCommand) -> Void
 	{
-		print("HandleOnEvaluate")
+		print("handleOnEvaluate")
 
-		guard let network:NEHotspotNetwork = command.network else {
+		guard let network: NEHotspotNetwork = command.network else {
 			return
 		}
-		
-		guard _dataArray.contains(WiFiData(network:network)) else{
+
+		guard hotspots.contains(Hotspot(network: network)) else{
 			// unmanaged network.
 			return
 		}
 
-		
+
 		// managed network.
 		print(network)
 
 		network.setConfidence(NEHotspotHelperConfidence.high)
-		
-		
+
+
 		let response = command.createResponse(NEHotspotHelperResult.success)
 		response.setNetwork(network)
 		response.deliver()
 	}
 
 	/**
-	 * Handle, Maintain.
+	 * handle, Maintain.
 	 *
 	 * This event is after second time connecting.
 	 * connecting using cache.
 	 */
-	fileprivate func HandleOnMaintain(command:NEHotspotHelperCommand) -> Void
+	fileprivate func handleOnMaintain(command:NEHotspotHelperCommand) -> Void
 	{
-		print("HandleOnMaintain")
+		print("handleOnMaintain")
 
-		guard let network:NEHotspotNetwork = command.network else {
+		guard let network: NEHotspotNetwork = command.network else {
 			return
 		}
 		
-		guard _dataArray.contains(WiFiData(network:network)) else{
+		guard hotspots.contains(Hotspot(network: network)) else{
 			// unmanaged network.
 			return
 		}
-		
-		
+
+
 		// managed network.
 		print(network)
 
@@ -196,24 +194,24 @@ class HotspotHelperManager
 	}
 
 	/**
-	 * Handle, Auth.
+	 * handle, Auth.
 	 *
 	 * Best match Helper's handle called whan after evalute.
 	 */
-	fileprivate func HandleOnAuthenticate(command:NEHotspotHelperCommand) -> Void
+	fileprivate func handleOnAuthenticate(command: NEHotspotHelperCommand) -> Void
 	{
-		print("HandleOnAuthenticate")
+		print("handleOnAuthenticate")
 
 		guard let network:NEHotspotNetwork = command.network else {
 			return
 		}
 		
-		guard _dataArray.contains(WiFiData(network:network)) else{
+		guard hotspots.contains(Hotspot(network: network)) else{
 			// unmanaged network.
 			return
 		}
-		
-		
+
+
 		// managed network.
 		print(network)
 
@@ -223,19 +221,19 @@ class HotspotHelperManager
 	}
 
 	/**
-	 * Handle, UI present.
+	 * handle, UI present.
 	 */
-	fileprivate func HandleOnPresentUI(command:NEHotspotHelperCommand) -> Void
+	fileprivate func handleOnPresentUI(command: NEHotspotHelperCommand) -> Void
 	{
-		print("HandleOnPresentUI")
+		print("handleOnPresentUI")
 	}
 
 	/**
-	 * Handle, Logoff
+	 * handle, Logoff
 	 */
-	fileprivate func HandleOnLogoff(command:NEHotspotHelperCommand) -> Void
+	fileprivate func handleOnLogoff(command: NEHotspotHelperCommand) -> Void
 	{
-		print("HandleOnLogoff")
+		print("handleOnLogoff")
 	}
 	
 }

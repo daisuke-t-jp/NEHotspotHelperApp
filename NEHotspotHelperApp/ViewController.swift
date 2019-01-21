@@ -63,12 +63,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
 			return
 		}
 		
-		let data: WiFiData = WiFiData()
-		data._BSSID = _textfieldBSSID!.text!
-		data._SSID = _textfieldSSID!.text!
-		data._PW = _textfieldPW!.text!
+		let hotspot: Hotspot = Hotspot()
+		hotspot.bssid = _textfieldBSSID!.text!
+		hotspot.ssid = _textfieldSSID!.text!
+		hotspot.pw = _textfieldPW!.text!
 
-		HotspotHelperManager.sharedInstance._dataArray = [data]
+		HotspotHelperManager.sharedInstance.hotspots = [hotspot]
 
 		
 		let alert: UIAlertController = UIAlertController(title: "",
