@@ -2,7 +2,7 @@
 - This project is Apple NetworkExtension's NEHotspotHelper API demo app.
 - App can set Wi-Fi auth setting to iOS setting.
 
-## Prepare NetworkExtension API
+# Prepare NetworkExtension API
 We need prepare to use NetworkExtention API.
 
 ### 1. Send request to apple for NetworkExtension API.
@@ -37,7 +37,7 @@ Open "Info.plist", add "Required background modes ( Array )" row and Set value "
 Open "*.entitlements" file, add "com.apple.developer.networking.HotspotHelper" row and Set value "YES ( Boolean )".
 
 
-## Run App
+# Run App
 ### 1. Set SSID ( BSSID ) and Password then touch "Register" button.
 <img src="https://github.com/daisuke-t-jp/NEHotspotHelperApp/blob/master/doc/app_register.png" width="320px">
 
