@@ -92,7 +92,7 @@ class HotspotHelperManager {
       
     for network in command.networkList ?? [] {
       autoreleasepool {
-        guard let index = hotspots.index(of: Hotspot(network: network)) else {
+        guard let index = hotspots.firstIndex(of: Hotspot(network: network)) else {
           // unmanaged network.
           return
         }
