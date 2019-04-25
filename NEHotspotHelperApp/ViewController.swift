@@ -19,65 +19,65 @@ class ViewController: UIViewController, UITextFieldDelegate {
   
   // MARK: life-cycle
   override func viewDidLoad() {
-	  super.viewDidLoad()
-	  
-	  _textfieldBSSID.delegate = self
-	  _textfieldSSID.delegate = self
-	  _textfieldPW.delegate = self
-	  
-	  _button.addTarget(self,
-	  	  	    action: #selector(ButtonAction),
-	  	  	    for: UIControl.Event.touchUpInside)
+    super.viewDidLoad()
+    
+    _textfieldBSSID.delegate = self
+    _textfieldSSID.delegate = self
+    _textfieldPW.delegate = self
+    
+    _button.addTarget(self,
+              action: #selector(ButtonAction),
+              for: UIControl.Event.touchUpInside)
   }
   
   
   // MARK: UITextField delegate
   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-	  view.endEditing(true)
-	  return false
+    view.endEditing(true)
+    return false
   }
   
   
   // MARK: Button Action
   @objc fileprivate func ButtonAction(_ sender: AnyObject)
   {
-	  var alertMessage: String = ""
-	  if _textfieldSSID!.text!.count == 0
-	  {
-  	  alertMessage = "SSID is empty."
-	  }
-	  else if _textfieldPW!.text!.count == 0
-	  {
-  	  alertMessage = "PW is empty."
-	  }
+    var alertMessage: String = ""
+    if _textfieldSSID!.text!.count == 0
+    {
+      alertMessage = "SSID is empty."
+    }
+    else if _textfieldPW!.text!.count == 0
+    {
+      alertMessage = "PW is empty."
+    }
 
-	  guard alertMessage.count == 0 else {
-  	  let alert: UIAlertController = UIAlertController(title: "",
-  	  	  	  	  	  	  	   message: alertMessage,
-  	  	  	  	  	  	  	   preferredStyle: UIAlertController.Style.alert)
-  	  
-  	  let actionOK: UIAlertAction = UIAlertAction(title: "OK",  style: UIAlertAction.Style.default, handler:nil)
-  	  alert.addAction(actionOK)
-  	  present(alert, animated: true, completion: nil)
-  	  
-  	  return
-	  }
-	  
-	  let hotspot: Hotspot = Hotspot()
-	  hotspot.bssid = _textfieldBSSID!.text!
-	  hotspot.ssid = _textfieldSSID!.text!
-	  hotspot.pw = _textfieldPW!.text!
+    guard alertMessage.count == 0 else {
+      let alert: UIAlertController = UIAlertController(title: "",
+                               message: alertMessage,
+                               preferredStyle: UIAlertController.Style.alert)
+      
+      let actionOK: UIAlertAction = UIAlertAction(title: "OK",  style: UIAlertAction.Style.default, handler:nil)
+      alert.addAction(actionOK)
+      present(alert, animated: true, completion: nil)
+      
+      return
+    }
+    
+    let hotspot: Hotspot = Hotspot()
+    hotspot.bssid = _textfieldBSSID!.text!
+    hotspot.ssid = _textfieldSSID!.text!
+    hotspot.pw = _textfieldPW!.text!
 
-	  HotspotHelperManager.sharedInstance.hotspots = [hotspot]
+    HotspotHelperManager.sharedInstance.hotspots = [hotspot]
 
-	  
-	  let alert: UIAlertController = UIAlertController(title: "",
-	  	  	  	  	  	  	   message: "Register.",
-	  	  	  	  	  	  	   preferredStyle: UIAlertController.Style.alert)
-	  
-	  let actionOK: UIAlertAction = UIAlertAction(title: "OK",  style: UIAlertAction.Style.default, handler:nil)
-	  alert.addAction(actionOK)
-	  present(alert, animated: true, completion: nil)
+    
+    let alert: UIAlertController = UIAlertController(title: "",
+                             message: "Register.",
+                             preferredStyle: UIAlertController.Style.alert)
+    
+    let actionOK: UIAlertAction = UIAlertAction(title: "OK",  style: UIAlertAction.Style.default, handler:nil)
+    alert.addAction(actionOK)
+    present(alert, animated: true, completion: nil)
   }
 }
 
