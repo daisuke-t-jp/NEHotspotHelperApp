@@ -31,7 +31,7 @@ class Hotspot: Equatable {
     pw = ""
     authType = AuthType.WEP
   }
-
+  
   init(network: NEHotspotNetwork) {
     bssid = network.bssid
     ssid = network.ssid
@@ -55,8 +55,8 @@ class Hotspot: Equatable {
   
   var description: String {
     let res = String(format: "BSSID[%@] SSID[%@",
-             bssid,
-             ssid
+                     bssid,
+                     ssid
     )
     
     return res

@@ -9,13 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
-
+  
   // MARK: outlet
   @IBOutlet weak var _textfieldBSSID: UITextField!
   @IBOutlet weak var _textfieldSSID: UITextField!
   @IBOutlet weak var _textfieldPW: UITextField!
   @IBOutlet weak var _button: UIButton!
-
+  
   
   // MARK: life-cycle
   override func viewDidLoad() {
@@ -26,8 +26,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     _textfieldPW.delegate = self
     
     _button.addTarget(self,
-              action: #selector(ButtonAction),
-              for: UIControl.Event.touchUpInside)
+                      action: #selector(ButtonAction),
+                      for: UIControl.Event.touchUpInside)
   }
   
   
@@ -50,11 +50,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     {
       alertMessage = "PW is empty."
     }
-
+    
     guard alertMessage.count == 0 else {
       let alert: UIAlertController = UIAlertController(title: "",
-                               message: alertMessage,
-                               preferredStyle: UIAlertController.Style.alert)
+                                                       message: alertMessage,
+                                                       preferredStyle: UIAlertController.Style.alert)
       
       let actionOK: UIAlertAction = UIAlertAction(title: "OK",  style: UIAlertAction.Style.default, handler:nil)
       alert.addAction(actionOK)
@@ -67,13 +67,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
     hotspot.bssid = _textfieldBSSID!.text!
     hotspot.ssid = _textfieldSSID!.text!
     hotspot.pw = _textfieldPW!.text!
-
+    
     HotspotHelperManager.sharedInstance.hotspots = [hotspot]
-
+    
     
     let alert: UIAlertController = UIAlertController(title: "",
-                             message: "Register.",
-                             preferredStyle: UIAlertController.Style.alert)
+                                                     message: "Register.",
+                                                     preferredStyle: UIAlertController.Style.alert)
     
     let actionOK: UIAlertAction = UIAlertAction(title: "OK",  style: UIAlertAction.Style.default, handler:nil)
     alert.addAction(actionOK)
